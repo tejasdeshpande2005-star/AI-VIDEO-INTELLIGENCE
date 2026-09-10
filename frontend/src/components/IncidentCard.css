@@ -1,0 +1,47 @@
+.incident-card {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--risk-low);
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.incident-card:hover {
+  background: var(--bg-card-hover);
+}
+
+.ic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.ic-behaviour {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.ic-risk {
+  font-size: 0.75em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.ic-body {
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+}
+
+.ic-time {
+  margin-bottom: 4px;
+}
+
+.ic-meta {
+  display: flex;
+  justify-content: space-between;
+}

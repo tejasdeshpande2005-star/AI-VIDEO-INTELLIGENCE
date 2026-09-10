@@ -1,0 +1,41 @@
+.stats-bar {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 12px 24px;
+  align-items: center;
+  gap: 24px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-label {
+  color: var(--color-text-muted);
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.2em;
+  font-weight: 700;
+  background: var(--bg-main);
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--border-color);
+}
+
+.stat-item.critical .stat-value { color: white; background: var(--risk-critical); }
+.stat-item.high .stat-value { color: white; background: var(--risk-high); }
+.stat-item.medium .stat-value { color: white; background: var(--risk-medium); }
+.stat-item.low .stat-value { color: white; background: var(--risk-low); }

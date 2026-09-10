@@ -1,0 +1,28 @@
+{
+  "name": "warehouse-behaviour-intelligence-backend",
+  "version": "1.0.0",
+  "description": "Backend for Warehouse Behaviour Intelligence — ingests CV module JSONL output, runs risk rule engine, serves REST/WebSocket API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "jest --forceExit --detectOpenHandles",
+    "ingest": "node src/scripts/ingest.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "sql.js": "^1.11.0",
+    "chokidar": "^4.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.0",
+    "socket.io": "^4.8.0",
+    "uuid": "^11.0.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

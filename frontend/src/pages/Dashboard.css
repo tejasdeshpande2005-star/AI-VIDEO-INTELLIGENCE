@@ -1,0 +1,102 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: calc(100vh - 80px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-card);
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.video-selector label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.video-selector select {
+  background: var(--bg-main);
+  color: var(--color-text);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.ingest-btn {
+  background: var(--highlight-pink);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.ingest-btn:hover {
+  opacity: 0.9;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+.grid-cell {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-cell {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.timeline-cell {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+.heatmap-cell {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.chat-cell {
+  /* Alternatively can be a floating widget or integrated, we'll put it where heatmap is and share or put heatmap elsewhere */
+  /* Let's adjust grid: video top-left, timeline right. Bottom-left heatmap, bottom-middle chat */
+}
+
+/* Adjust grid if needed to fit all 4 */
+.dashboard-grid {
+  grid-template-columns: 1fr 1fr 300px;
+  grid-template-rows: auto 300px;
+}
+.video-cell {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+.timeline-cell {
+  grid-column: 3 / 4;
+  grid-row: 1 / 3;
+}
+.heatmap-cell {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.chat-cell {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
